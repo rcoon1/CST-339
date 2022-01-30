@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="https://ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+
+<head>
+<meta charset="ISO-8859-1">
+  <title>About Us</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script><link rel="stylesheet" href="./style.css">
+
+
+
+	
+	
+
+</head>
+<body>
+<div class="header">
+    <div class="overlay">
+        <div class="container-custom">
+            <ul class="nav-one">
+                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="logo-nav">
+                                            <video class="logo" width="250" height="250" autoplay muted loop>
+                    <source src="VinylLogo.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video>
+                <i class="fa fa-bars fa-2x"></i>
+                <ul class="nav-two">
+
+                    <li class="active"><a th:href="@{/}">Home</a></li>
+                    <li>Records</li>
+                    <li>Membership</li>
+                    <li>My Profile</li>
+                    <li><a th:href="@{/aboutus}">About Us</a></li>
+                    <li><i class="fa fa-search"></i></li>
+                    <li class="slide"></li>
+                </ul>
+            </div>
+
+    
+</div>
+<h2>About Us</h2>
+<p> Music sets a tone, impacts a mood, connects people, documents history, influences culture, and simply makes life better! At Vinyl Craze, we've long-proclaimed the superiority of music on vinyl, and we're here to make your collection look and sound better than ever. Our fandom is serious, but we don't take ourselves too seriously...</p>
+
+<p>As one of the largest vinyl retailers on the web, we make it easy to find the albums you love and uncover some hidden classics. Sift through our shop by genre, artist, color vinyl, curated collections, and more.</p>
+
+<p>Stay a while by joining our mailing list, signing up for our rewards program, getting personalized record recommendations, or starting your very own wishlist. We promise to respect your privacy and only deliver you stellar tunes and perks.</p>
+
+<p>By the way, we appreciate an original vinyl pressing to the dark side of the moon and back, but we only sell brand new, shrink-wrapped vinyl here. Happy spinning from all of us at Vinyl Craze.</p>
+
+<p>Have a Question? Drop us a line <a th:href="@{/contact}" style="text-decoration: underline;">here.</a></p>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
