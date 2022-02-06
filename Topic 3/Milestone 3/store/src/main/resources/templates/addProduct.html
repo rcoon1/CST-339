@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<!-- create navigation bar ( header) -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+	<!-- Create HTML registration form -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+
+				<!-- success message -->
+				<div th:if="${param.success}">
+					<div class="alert alert-info">You've successfully added a product.</div>
+				</div>
+
+				<h1 class="white-text">Add Product</h1>
+
+				<form th:action="@{/addProduct}" method="post" th:object="${record}">
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label class="white-text" for="validationDefault01">Artist</label> <input type="text" class="form-control"
+								id="validationDefault01" placeholder="Artist" value=""
+								required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label class="white-text" for="validationDefault02">Title</label> <input type="text" class="form-control"
+								id="validationDefault02" placeholder="Title" value=""
+								required>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label class="white-text" for="validationDefaultEmail">Description</label>
+							<div class="input-group">
+
+								<input type="text" class="form-control"
+									id="validationDefaultEmail" placeholder="Description"
+									aria-describedby="inputGroupPrepend2" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-row" id="top-pad">
+						<div class="col-md-6 mb-3">
+							<label class="white-text" for="validationDefault03">Decade</label>
+							<input type="text" class="form-control" id="validationDefault03"
+								placeholder="Decade" required>
+						</div>
+						<div class="col-md-3 mb-3">
+							<label class="white-text" for="validationDefault04">Price</label>
+							<input type="text" class="form-control" id="validationDefault04"
+								placeholder="Price" required>
+						</div>
+												<div class="col-md-3 mb-3">
+							<label class="white-text" for="validationDefault04">Image URL</label>
+							<input type="text" class="form-control" id="validationDefault04"
+								placeholder="Image URL" required>
+						</div>
+
+					</div>
+					<div class="form-group" id="top-pad">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value=""
+								id="invalidCheck2" required> <label
+								class="form-check-label" for="invalidCheck2"> All information is correct? </label>
+						</div>
+					</div>
+					<button style="margin-bottom: 8px;" class="btn btn-primary"
+						type="submit">Submit</button>
+				</form>
+				<span class="white-text"> <a
+					th:href="@{/adminIndex}" style="text-decoration: underline;">Back to Home</a></span>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
